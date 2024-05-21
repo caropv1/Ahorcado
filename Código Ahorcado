@@ -19,3 +19,11 @@ char pistas[4][3][100] = {
         {"Estudio del movimiento y fuerzas", "Ciencia de calor y trabajo", "Maquina que convierte energia"},
         {"Crear un pozo en la tierra", "Compuestos organicos naturales", "Lugar para procesar petroleo"}
     };
+char ahorcado[6][15] = {
+        " O\n",
+        " O\n |\n",
+        " O\n/|\n",
+        " O\n/|\\\n",
+        " O\n/|\\\n/\n",
+        " O\n/|\\\n/ \\\n"
+    };
