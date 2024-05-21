@@ -68,3 +68,28 @@ char ahorcado[6][15] = {
                     aciertos++;
                 }
             }
+
+          
+            if (!encontrado) {
+                vidas--;
+                printf("%s", ahorcado[6 - vidas]); 
+            }
+
+     
+            if (aciertos == longitud) {
+                printf("Felicidades! Has adivinado la palabra: %s\n", palabra);
+                terminado = 1;
+            }
+        }
+
+   
+        if (vidas == 0) {
+            printf("Ahorcado! La palabra era: %s\n", palabra);
+        }
+
+        printf("Quieres jugar otra vez? (1 para si, 0 para no): ");
+        scanf("%d", &seguirJugando);
+    }
+
+    return 0; 
+}
