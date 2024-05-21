@@ -27,3 +27,21 @@ char ahorcado[6][15] = {
         " O\n/|\\\n/\n",
         " O\n/|\\\n/ \\\n"
     };
+    int seguirJugando = 1; 
+
+
+    while (seguirJugando) {
+        int eleccion;
+       
+        printf("Elige una ingenieria:\n1. Aeroespacial\n2. Geologica\n3. Mecanica\n4. Petrolera\n");
+        scanf("%d", &eleccion);
+        eleccion--; 
+
+ 
+        int palabraElegida = rand() % 3; 
+        char *palabra = palabras[eleccion][palabraElegida];
+        char *pista = pistas[eleccion][palabraElegida];
+        int longitud = strlen(palabra); 
+        char descubierta[longitud + 1]; 
+        memset(descubierta, '_', longitud); 
+        descubierta[longitud] = '\0'; 
