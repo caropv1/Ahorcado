@@ -45,3 +45,26 @@ char ahorcado[6][15] = {
         char descubierta[longitud + 1]; 
         memset(descubierta, '_', longitud); 
         descubierta[longitud] = '\0'; 
+
+        descubierta[0] = palabra[0];
+        descubierta[longitud - 1] = palabra[longitud - 1];
+
+        printf("Pista: %s\n", pista);
+
+        int vidas = 6, aciertos = 2, terminado = 0;
+        char letra;
+
+        while (vidas > 0 && !terminado) {
+            printf("\n%s\n", descubierta); 
+            printf("Introduce una letra: ");
+            scanf(" %c", &letra);
+
+            int encontrado = 0; 
+            
+            for (int i = 1; i < longitud - 1; i++) {
+                if (palabra[i] == letra && descubierta[i] == '_') {
+                    descubierta[i] = letra;
+                    encontrado = 1;
+                    aciertos++;
+                }
+            }
