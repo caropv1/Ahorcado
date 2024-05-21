@@ -5,3 +5,11 @@
 
 int main() {
     srand(time(0)); // Inicializa la semilla para la generación de números aleatorios usando la hora actual
+// Declaración de los arreglos para las ingenierías, palabras y pistas
+    char ingenierias[4][20] = {"aeroespacial", "geologica", "mecanica", "petrolera"};
+    char palabras[4][3][20] = {
+        {"satelite", "orbita", "propulsion"},
+        {"mineral", "sedimentaria", "fosil"},
+        {"dinamica", "termodinamica", "motor"},
+        {"perforacion", "hidrocarburo", "refineria"}
+    };
